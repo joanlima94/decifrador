@@ -17,12 +17,11 @@ char soma_modulo_alfabeto(char a, char b) {
   if (a>='A' && a<='Z') {
     a0 = a-'A'; //Letra de Entrada
     b0 = b-'A'; //Letra da palavra chave
-    c0 = 'A'+ (a0+b0)%26; //Cifra do texto já convertido
-    d0 = 'A' + (a0-b0+26)%26; //Decodificador fornecido pelo Wikipedia
+    c0 = (a0-b0+26);
+    d0 = 'A' + c0%26;
     return d0;
   } else return a;
 }
-
 
 int main() {
   int j=0;
